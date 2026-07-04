@@ -7,12 +7,12 @@ import { ShinyButton } from "@/components/ui/shiny-button";
 gsap.registerPlugin(ScrollTrigger);
 
 const items = [
-  { img: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80", r: -3, href: "#automotive-motion" },
-  { img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&q=80", r: 2, href: "#urban-architecture" },
-  { img: "https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?w=800&q=80", r: -2, href: "#human-perspective" },
-  { img: "https://images.unsplash.com/photo-1618172193763-c511deb635ca?w=800&q=80", r: 3, href: "#brand-identity" },
-  { img: "https://images.unsplash.com/photo-1618172193622-ae2d025f4032?w=800&q=80", r: -1, href: "#works" },
-  { img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&q=80", r: 2, href: "#works" },
+  { img: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80", r: -3, href: "#automotive-motion", label: "Automotive motion project" },
+  { img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&q=80", r: 2, href: "#urban-architecture", label: "Urban architecture project" },
+  { img: "https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?w=800&q=80", r: -2, href: "#human-perspective", label: "Human perspective documentary project" },
+  { img: "https://images.unsplash.com/photo-1618172193763-c511deb635ca?w=800&q=80", r: 3, href: "#brand-identity", label: "Brand identity project" },
+  { img: "https://images.unsplash.com/photo-1618172193622-ae2d025f4032?w=800&q=80", r: -1, href: "#works", label: "View our work" },
+  { img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&q=80", r: 2, href: "#works", label: "View our portfolio" },
 ];
 
 export function Explorations() {
@@ -97,10 +97,11 @@ export function Explorations() {
                 <a
                   key={i}
                   href={it.href}
+                  aria-label={it.label}
                   style={{ transform: `rotate(${it.r}deg)` }}
                   className="pointer-events-auto self-start w-full max-w-[320px] aspect-square rounded-2xl overflow-hidden border border-stroke bg-surface hover:scale-[1.02] transition-transform block"
                 >
-                  <img src={it.img} alt="" className="w-full h-full object-cover" />
+                  <img src={it.img} alt={it.label} className="w-full h-full object-cover" />
                 </a>
               ))}
             </div>
@@ -109,10 +110,11 @@ export function Explorations() {
                 <a
                   key={i}
                   href={it.href}
+                  aria-label={it.label}
                   style={{ transform: `rotate(${it.r}deg)` }}
                   className="pointer-events-auto self-end w-full max-w-[320px] aspect-square rounded-2xl overflow-hidden border border-stroke bg-surface hover:scale-[1.02] transition-transform block"
                 >
-                  <img src={it.img} alt="" className="w-full h-full object-cover" />
+                  <img src={it.img} alt={it.label} className="w-full h-full object-cover" />
                 </a>
               ))}
             </div>
@@ -144,9 +146,10 @@ export function Explorations() {
             <a
               key={i}
               href={it.href}
+              aria-label={it.label}
               className="aspect-square rounded-xl overflow-hidden border border-stroke bg-surface block"
             >
-              <img src={it.img} alt="" className="w-full h-full object-cover" />
+              <img src={it.img} alt={it.label} className="w-full h-full object-cover" />
             </a>
           ))}
         </div>

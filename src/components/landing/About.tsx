@@ -53,6 +53,8 @@ export function About() {
             Who We Are
           </div>
 
+          <h2 className="sr-only">About EvoDev</h2>
+
           <HoverPreview className="text-2xl leading-relaxed text-text-primary md:text-3xl md:leading-[1.4]">
             <p className="font-body">
               EvoDev, a brand by EvoDoc, is a dynamic{" "}

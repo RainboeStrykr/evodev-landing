@@ -55,11 +55,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "EvoDev — Brand Growth and Online Presence Creation" },
+      { title: "EvoDev — SaaS Engineering Partner for Startups & Founders" },
       { name: "description", content: "EvoDev crafts bespoke digital experiences — web and app development, SEO, and ads — to grow your brand and online presence." },
-      { property: "og:title", content: "EvoDev — Brand Growth and Online Presence Creation" },
+      { property: "og:title", content: "EvoDev — SaaS Engineering Partner for Startups & Founders" },
       { property: "og:description", content: "Bespoke digital experiences that drive growth, engagement, and success." },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://evodev.site/" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [

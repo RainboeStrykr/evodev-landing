@@ -1,0 +1,20 @@
+# EvoDev
+
+> Your technical co-founder, on demand. EvoDev is a full-service digital agency that builds bespoke web and mobile applications, SaaS platforms, cloud infrastructure, and growth-focused marketing systems for startups and established brands.
+
+## Services
+
+- Custom Application Development — end-to-end web and mobile apps tailored to your product vision
+- SaaS Platform Engineering — scalable multi-tenant platforms with modern architecture
+- Cloud Architecture and DevOps — infrastructure design, CI/CD pipelines, and managed deployments
+- SEO and Social Media Optimization — organic growth, content strategy, and paid acquisition
+
+## About
+
+EvoDev, a brand by EvoDoc, combines creativity, technology, and strategy to deliver digital solutions as unique as each client's brand. The team operates globally and remotely, partnering with founders and product teams from concept through launch and beyond.
+
+## Contact
+
+- Email: contact@evodev.com
+- Phone: +91 96967 67289
+- Reach: Global / Remote
