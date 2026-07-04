@@ -40,7 +40,7 @@ export function Navbar() {
       <MobileNav className="bg-black/20">
         <MobileNavHeader>
           <div className="flex items-center gap-2">
-            <img src="/full-logo.png" alt="EvoDev" className="h-14 w-auto" />
+            <img src="/full-logo.png" alt="EvoDev" className="h-8 w-auto" />
           </div>
           <MobileNavToggle isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
         </MobileNavHeader>
