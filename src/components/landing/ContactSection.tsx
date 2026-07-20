@@ -21,8 +21,8 @@ const contactMethods = [
   {
     icon: Mail,
     label: "Email",
-    value: "contact@evodev.com",
-    href: "mailto:contact@evodev.com",
+    value: "contact@evodoc.site",
+    href: "mailto:contact@evodoc.site",
   },
   {
     icon: Phone,
@@ -57,11 +57,29 @@ export function ContactSection() {
     resolver: zodResolver(inquirySchema),
   });
 
-  const onSubmit = async (_data: InquiryForm) => {
-    await new Promise((resolve) => setTimeout(resolve, 800));
-    setSubmitted(true);
-    reset();
-    setTimeout(() => setSubmitted(false), 4000);
+  const onSubmit = async (data: InquiryForm) => {
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/contact@evodoc.site", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(data)
+      });
+      const result = await response.json();
+      console.log("FormSubmit response:", result);
+      
+      if (result.success) {
+        setSubmitted(true);
+        reset();
+        setTimeout(() => setSubmitted(false), 4000);
+      } else {
+        console.error("FormSubmit error:", result);
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    }
   };
 
   return (
@@ -205,7 +223,7 @@ export function ContactSection() {
                       {isSubmitting ? "Sending..." : "Send message"}
                     </ShinyButton>
 
-                    <a href="#" className="text-xs text-muted hover:text-[#c9a84c] transition-colors">
+                    <a href="https://wa.me/919696767289?text=Hi%20EvoDev%2C%20I%20want%20to%20discuss%20my%20project" className="text-xs text-muted hover:text-[#c9a84c] transition-colors">
                       Or reach us directly on WhatsApp →
                     </a>
                   </div>
