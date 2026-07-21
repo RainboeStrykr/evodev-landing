@@ -59,7 +59,7 @@ export function ContactSection() {
 
   const onSubmit = async (data: InquiryForm) => {
     try {
-      const response = await fetch("https://formsubmit.co/ajax/contact@evodoc.site", {
+      const response = await fetch("https://formsubmit.co/ajax/shubh.evodoc@gmail.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -70,7 +70,7 @@ export function ContactSection() {
       const result = await response.json();
       console.log("FormSubmit response:", result);
       
-      if (result.success) {
+      if (response.ok) {
         setSubmitted(true);
         reset();
         setTimeout(() => setSubmitted(false), 4000);
