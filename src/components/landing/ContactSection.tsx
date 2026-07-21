@@ -100,13 +100,18 @@ export function ContactSection() {
   });
 
   const onSubmit = async (data: InquiryForm) => {
+    console.log("onSubmit called with data:", data);
+    
     // Check rate limit
+    console.log("Checking rate limit. lastSubmissionTime:", lastSubmissionTime, "now:", Date.now());
     if (lastSubmissionTime && Date.now() - lastSubmissionTime < RATE_LIMIT_MS) {
+      console.log("Rate limit hit, showing cooldown");
       setShowCooldown(true);
       return;
     }
 
     try {
+      console.log("Sending request to FormSubmit");
       const response = await fetch("https://formsubmit.co/ajax/shubh.evodoc@gmail.com", {
         method: "POST",
         headers: {
@@ -115,10 +120,12 @@ export function ContactSection() {
         },
         body: JSON.stringify(data)
       });
+      console.log("Got response, status:", response.status, "ok:", response.ok);
       const result = await response.json();
       console.log("FormSubmit response:", result);
       
-      if (result.success) {
+      if (response.ok) {
+        console.log("Submission successful!");
         const now = Date.now();
         localStorage.setItem("lastFormSubmissionTime", now.toString());
         setLastSubmissionTime(now);
@@ -300,6 +307,19 @@ export function ContactSection() {
                   {submitted && (
                     <p className="text-sm text-green-400">Thanks — your message has been sent.</p>
                   )}
+                  
+                  {/* Debug button to clear localStorage */}
+                  <button
+                    onClick={() => {
+                      localStorage.removeItem("lastFormSubmissionTime");
+                      setLastSubmissionTime(null);
+                      setShowCooldown(false);
+                      console.log("Cleared localStorage");
+                    }}
+                    className="text-xs text-muted hover:text-white transition-colors mt-2"
+                  >
+                    [Debug] Clear rate limit
+                  </button>
                 </form>
               </motion.div>
             </ContactCard>
