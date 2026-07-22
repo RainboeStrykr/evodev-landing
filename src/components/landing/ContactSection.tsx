@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -48,47 +48,6 @@ function ContactCard({ children, className }: { children: React.ReactNode; class
 
 export function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
-  const [lastSubmissionTime, setLastSubmissionTime] = useState<number | null>(null);
-  const [showCooldown, setShowCooldown] = useState(false);
-  const [, forceUpdate] = useState({}); // To force re-render for cooldown timer
-  const RATE_LIMIT_MS = 60 * 60 * 1000; // 1 hour in milliseconds
-
-  // Check localStorage for last submission time on component mount
-  useEffect(() => {
-    const storedTime = localStorage.getItem("lastFormSubmissionTime");
-    if (storedTime) {
-      const time = parseInt(storedTime, 10);
-      if (Date.now() - time < RATE_LIMIT_MS) {
-        setLastSubmissionTime(time);
-        setShowCooldown(true);
-      }
-    }
-  }, []);
-
-  // Timer to update cooldown time every minute
-  useEffect(() => {
-    if (!showCooldown) return;
-
-    const interval = setInterval(() => {
-      if (lastSubmissionTime && Date.now() - lastSubmissionTime >= RATE_LIMIT_MS) {
-        setShowCooldown(false);
-        setLastSubmissionTime(null);
-      }
-      forceUpdate({}); // Force re-render to update the cooldown text
-    }, 60000); // Update every minute
-
-    return () => clearInterval(interval);
-  }, [showCooldown, lastSubmissionTime]);
-
-  const getCooldownRemaining = () => {
-    if (!lastSubmissionTime) return null;
-    const elapsed = Date.now() - lastSubmissionTime;
-    const remaining = RATE_LIMIT_MS - elapsed;
-    if (remaining <= 0) return null;
-    const minutes = Math.floor((remaining / 1000 / 60) % 60);
-    const hours = Math.floor(remaining / 1000 / 60 / 60);
-    return `${hours > 0 ? `${hours} hour${hours > 1 ? 's' : ''} ` : ''}${minutes} minute${minutes !== 1 ? 's' : ''}`;
-  };
 
   const {
     register,
@@ -101,7 +60,7 @@ export function ContactSection() {
 
   const onSubmit = async (data: InquiryForm) => {
     try {
-      const response = await fetch("https://formsubmit.co/ajax/contact@evodoc.site", {
+      const response = await fetch("https://formsubmit.co/ajax/abhirajbhowmick27@gmail.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -109,20 +68,13 @@ export function ContactSection() {
         },
         body: JSON.stringify(data)
       });
-      console.log("Got response, status:", response.status, "ok:", response.ok);
       const result = await response.json();
       console.log("FormSubmit response:", result);
       
-      if (result.success) {
+      if (response.ok) {
         setSubmitted(true);
         reset();
         setTimeout(() => setSubmitted(false), 4000);
-
-        // Auto-hide cooldown message after rate limit expires
-        setTimeout(() => {
-          setShowCooldown(false);
-          setLastSubmissionTime(null);
-        }, RATE_LIMIT_MS);
       } else {
         console.error("FormSubmit error:", result);
       }
@@ -225,14 +177,6 @@ export function ContactSection() {
                 </p>
 
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-                  {showCooldown && (
-                    <div className="p-4 rounded-lg bg-amber-500/10 border border-amber-500/20">
-                      <p className="text-amber-400 text-sm">
-                        Please wait {getCooldownRemaining()} before sending another message.
-                      </p>
-                    </div>
-                  )}
-                  
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="contact-name" className="text-xs text-muted uppercase tracking-[0.2em] mb-1.5 block">
@@ -242,7 +186,6 @@ export function ContactSection() {
                         id="contact-name"
                         placeholder="Your name"
                         className="bg-surface border-stroke text-text-primary placeholder:text-muted/50"
-                        disabled={showCooldown}
                         {...register("name")}
                       />
                       {errors.name && <p className="text-xs text-red-400 mt-1.5">{errors.name.message}</p>}
@@ -256,7 +199,6 @@ export function ContactSection() {
                         type="email"
                         placeholder="your@email.com"
                         className="bg-surface border-stroke text-text-primary placeholder:text-muted/50"
-                        disabled={showCooldown}
                         {...register("email")}
                       />
                       {errors.email && <p className="text-xs text-red-400 mt-1.5">{errors.email.message}</p>}
@@ -272,14 +214,13 @@ export function ContactSection() {
                       placeholder="Tell us about your idea, budget range, and timeline..."
                       rows={4}
                       className="bg-surface border-stroke text-text-primary placeholder:text-muted/50 resize-none"
-                      disabled={showCooldown}
                       {...register("message")}
                     />
                     {errors.message && <p className="text-xs text-red-400 mt-1.5">{errors.message.message}</p>}
                   </div>
 
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 pt-2">
-                    <ShinyButton type="submit" disabled={isSubmitting || showCooldown} className="w-full sm:w-auto">
+                    <ShinyButton type="submit" disabled={isSubmitting} className="w-full sm:w-auto">
                       {isSubmitting ? "Sending..." : "Send message"}
                     </ShinyButton>
 
@@ -291,19 +232,6 @@ export function ContactSection() {
                   {submitted && (
                     <p className="text-sm text-green-400">Thanks — your message has been sent.</p>
                   )}
-                  
-                  {/* Debug button to clear localStorage */}
-                  <button
-                    onClick={() => {
-                      localStorage.removeItem("lastFormSubmissionTime");
-                      setLastSubmissionTime(null);
-                      setShowCooldown(false);
-                      console.log("Cleared localStorage");
-                    }}
-                    className="text-xs text-muted hover:text-white transition-colors mt-2"
-                  >
-                    [Debug] Clear rate limit
-                  </button>
                 </form>
               </motion.div>
             </ContactCard>
