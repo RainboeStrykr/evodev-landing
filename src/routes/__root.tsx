@@ -50,22 +50,48 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   );
 }
 
+const SITE_URL = "https://evodev.site";
+const SITE_NAME = "EvoDev";
+const SITE_TITLE = "EvoDev — Your Technical Co-Founder, On Demand";
+const SITE_DESCRIPTION =
+  "EvoDev builds bespoke web apps, SaaS platforms, cloud infrastructure, and growth-focused marketing systems for startups and founders. Ship faster with a world-class engineering partner.";
+const OG_IMAGE = `${SITE_URL}/og-image.png`;
+
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "EvoDev — SaaS Engineering Partner for Startups & Founders" },
-      { name: "description", content: "EvoDev crafts bespoke digital experiences — web and app development, SEO, and ads — to grow your brand and online presence." },
-      { property: "og:title", content: "EvoDev — SaaS Engineering Partner for Startups & Founders" },
-      { property: "og:description", content: "Bespoke digital experiences that drive growth, engagement, and success." },
+      { title: SITE_TITLE },
+      { name: "description", content: SITE_DESCRIPTION },
+      { name: "theme-color", content: "#070319" },
+      { name: "robots", content: "index, follow" },
+      // Open Graph
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://evodev.site/" },
+      { property: "og:url", content: `${SITE_URL}/` },
+      { property: "og:site_name", content: SITE_NAME },
+      { property: "og:locale", content: "en_US" },
+      { property: "og:title", content: SITE_TITLE },
+      { property: "og:description", content: SITE_DESCRIPTION },
+      { property: "og:image", content: OG_IMAGE },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "EvoDev — Your Technical Co-Founder, On Demand" },
+      // Twitter / X
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:site", content: "@evodev" },
+      { name: "twitter:title", content: SITE_TITLE },
+      { name: "twitter:description", content: SITE_DESCRIPTION },
+      { name: "twitter:image", content: OG_IMAGE },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
+      { rel: "canonical", href: `${SITE_URL}/` },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" },
+      { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png" },
+      { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
+      { rel: "manifest", href: "/site.webmanifest" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
@@ -80,11 +106,106 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   errorComponent: ErrorComponent,
 });
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: SITE_NAME,
+  url: SITE_URL,
+  logo: `${SITE_URL}/full-logo.png`,
+  description: SITE_DESCRIPTION,
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+91-96967-67289",
+    contactType: "customer support",
+    email: "contact@evodoc.site",
+    areaServed: "Worldwide",
+    availableLanguage: "English",
+  },
+  sameAs: [],
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: SITE_NAME,
+  url: SITE_URL,
+  description: SITE_DESCRIPTION,
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: `${SITE_URL}/?q={search_term_string}`,
+    },
+    "query-input": "required name=search_term_string",
+  },
+};
+
+const servicesJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "EvoDev Services",
+  url: `${SITE_URL}/#services`,
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      item: {
+        "@type": "Service",
+        name: "Custom Application Development",
+        description: "End-to-end web and mobile apps tailored to your product vision.",
+        provider: { "@type": "Organization", name: SITE_NAME },
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      item: {
+        "@type": "Service",
+        name: "SaaS Platform Engineering",
+        description: "Scalable multi-tenant platforms with modern architecture.",
+        provider: { "@type": "Organization", name: SITE_NAME },
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      item: {
+        "@type": "Service",
+        name: "Cloud Architecture and DevOps",
+        description: "Infrastructure design, CI/CD pipelines, and managed deployments.",
+        provider: { "@type": "Organization", name: SITE_NAME },
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 4,
+      item: {
+        "@type": "Service",
+        name: "SEO and Social Media Optimization",
+        description: "Organic growth, content strategy, and paid acquisition.",
+        provider: { "@type": "Organization", name: SITE_NAME },
+      },
+    },
+  ],
+};
+
 function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
         <HeadContent />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesJsonLd) }}
+        />
       </head>
       <body>
         {children}
