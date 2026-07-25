@@ -3,7 +3,6 @@ import { AuroraText } from "@/components/ui/aurora-text";
 import { OrbitingCircles } from "@/components/ui/orbiting-circles";
 import { ShinyButton } from "@/components/ui/shiny-button";
 
-
 const HEADING = "Your Technical Co-Founder, on demand.";
 const CTA_FADE_DELAY = 0.4;
 
@@ -172,6 +171,7 @@ export function MarketeamHero() {
         </div>
 
         <section className="mkt-foreground mkt-fade-up">
+          {/* Visually rendered H1 for users — styled via .mkt-h1 */}
           <h1 className="mkt-h1">
             <AuroraText className="mkt-h1" colors={["#c9a84c", "#A068FF", "#ffffff", "#c9a84c"]} speed={1}>
               {HEADING}

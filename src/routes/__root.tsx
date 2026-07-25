@@ -54,7 +54,7 @@ const SITE_URL = "https://evodev.site";
 const SITE_NAME = "EvoDev";
 const SITE_TITLE = "EvoDev — Your Technical Co-Founder, On Demand";
 const SITE_DESCRIPTION =
-  "EvoDev builds bespoke web apps, SaaS platforms, cloud infrastructure, and growth-focused marketing systems for startups and founders. Ship faster with a world-class engineering partner.";
+  "EvoDev builds web apps, SaaS platforms, cloud infrastructure, and marketing systems for startups and founders.";
 const OG_IMAGE = `${SITE_URL}/og-image.png`;
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
@@ -121,7 +121,11 @@ const organizationJsonLd = {
     areaServed: "Worldwide",
     availableLanguage: "English",
   },
-  sameAs: [],
+  sameAs: [
+    "https://x.com/evodev",
+    "https://linkedin.com/company/evodev",
+    "https://instagram.com/evodev.site",
+  ],
 };
 
 const websiteJsonLd = {
