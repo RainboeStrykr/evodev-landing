@@ -5,14 +5,14 @@ const projects = [
   {
     text: "Gyan Niketan Girls School",
     image: "/projects/gn-school-1.png",
-    url: "#gyan-niketan-girls-school",
+    url: "https://www.gyanniketan.in/",
     description:
       "Full-stack educational institution platform with an admin portal and student management.",
   },
   {
     text: "Gyan Niketan Digital Architecture",
     image: "/projects/gn-school-2.png",
-    url: "#gyan-niketan-digital-architecture",
+    url: "https://www.gyanniketan.in/",
     description:
       "Premium school management portal with an analytics dashboard and multi-role access.",
   },
@@ -24,11 +24,11 @@ const projects = [
       "Brand system and storytelling platform for a documentary studio, built to scale from a single film to an entire library.",
   },
   {
-    text: "Brand Identity",
-    image: "https://images.unsplash.com/photo-1561070791-2526d30994b8?w=1600&q=80",
-    url: "#brand-identity",
+    text: "Evodoc",
+    image: "/projects/evodoc.png",
+    url: "https://evodoc.in",
     description:
-      "End-to-end identity, product UI, and marketing site for a consumer SaaS — shipped from blank page to launch in six weeks.",
+      "The next generation of clinical intelligence. Empowering modern physicians with AI-assisted diagnostics and high-fidelity insights.",
   },
 ];
 

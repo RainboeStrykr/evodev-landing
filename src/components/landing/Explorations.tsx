@@ -7,12 +7,12 @@ import { ShinyButton } from "@/components/ui/shiny-button";
 gsap.registerPlugin(ScrollTrigger);
 
 const items = [
-  { img: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80", r: -3, href: "#automotive-motion", label: "Automotive motion project" },
-  { img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&q=80", r: 2, href: "#urban-architecture", label: "Urban architecture project" },
-  { img: "https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?w=800&q=80", r: -2, href: "#human-perspective", label: "Human perspective documentary project" },
-  { img: "https://images.unsplash.com/photo-1618172193763-c511deb635ca?w=800&q=80", r: 3, href: "#brand-identity", label: "Brand identity project" },
-  { img: "https://images.unsplash.com/photo-1618172193622-ae2d025f4032?w=800&q=80", r: -1, href: "#works", label: "View our work" },
-  { img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&q=80", r: 2, href: "#works", label: "View our portfolio" },
+  { img: "/demo/agarwal-realtors.png", r: -3, href: "https://agarwal-realtors-pearl.vercel.app/", label: "Agarwal Realtors" },
+  { img: "/demo/aafra-restaurant.png", r: 2, href: "https://afraa-restaurant-patna-uevl.vercel.app/", label: "Aafra Cocktail Bar and Kitchen" },
+  { img: "/demo/art-n-dreams.png", r: -2, href: "https://arts-n-dream.vercel.app/", label: "Luxury Art Gallery" },
+  { img: "/demo/ispeak-mental-health.png", r: 3, href: "https://ispeak-mentalhealthfirm.vercel.app/", label: "Mental Health Clinic" },
+  { img: "/demo/metro-food-court.png", r: -1, href: "https://www.metrofoodcourt.com", label: "Food court and restaurant" },
+  { img: "/demo/evocare.png", r: 2, href: "https://evodoc.in/evocare", label: "Healthcare AI" },
 ];
 
 export function Explorations() {
@@ -79,7 +79,7 @@ export function Explorations() {
               <span className="w-8 h-px bg-accent" />
             </div>
             <h2 className="font-display text-4xl md:text-6xl italic text-text-primary leading-[1.05]">
-              Grow <span className="italic">with us</span>
+              Explore <span className="italic">our expertise</span>
             </h2>
             <p className="mt-4 text-muted text-sm md:text-base">
               Expertise, innovation, and a collaborative, results-driven approach — designed to deliver measurable outcomes for your brand.
