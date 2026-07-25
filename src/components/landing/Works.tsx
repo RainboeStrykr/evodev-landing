@@ -18,7 +18,7 @@ const projects = [
   },
   {
     text: "Metro Food Court",
-    image: "/demo/metro-food-court.png",
+    image: "/projects/metro-food-court.png",
     url: "https://www.metrofoodcourt.com",
     description:
       "Metro Food Court is a quick-bites restaurant at New Bypass, Patna, serving North Indian, Chinese, and a full range of rolls and sandwiches.",
