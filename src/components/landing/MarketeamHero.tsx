@@ -380,6 +380,6 @@ const css = `
   .mkt-orbits { transform: scale(.5); }
   .mkt-btn-start { padding: 12px 22px; font-size: 14px; }
   .mkt-app { min-height: unset; }
-  .mkt-stage { min-height: unset; padding: 80px 24px 60px; }
+  .mkt-stage { min-height: unset; padding: 150px 24px 130px; }
 }
 `;
