@@ -3,7 +3,8 @@ import { AuroraText } from "@/components/ui/aurora-text";
 import { OrbitingCircles } from "@/components/ui/orbiting-circles";
 import { ShinyButton } from "@/components/ui/shiny-button";
 
-const HEADING = "Your Technical Co-Founder, on demand.";
+const HEADING = "We Build Brands That Stand Out and Websites That Convert.";
+const SUBHEADING = "Your all-in-one web development and brand agency — merging custom web design with digital strategy to accelerate your growth.";
 const CTA_FADE_DELAY = 0.4;
 
 export function MarketeamHero() {
@@ -178,6 +179,8 @@ export function MarketeamHero() {
             </AuroraText>
           </h1>
 
+          <p className="mkt-subheading">{SUBHEADING}</p>
+
           <div
             className="mkt-cta-row"
             style={{
@@ -188,14 +191,14 @@ export function MarketeamHero() {
           >
             <div className="btn-border-wrap">
               <a href="#contact" className="mkt-btn mkt-btn-start">
-                Get Started Today
+                Start Your Project
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
                   <path d="M9 6l6 6-6 6" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </a>
             </div>
             <ShinyButton href="#works" showArrow={false}>
-              View Our Portfolio
+              View Our Work
             </ShinyButton>
 
           </div>
@@ -328,7 +331,18 @@ const css = `
   font-weight: 600;
   line-height: 1.05;
   letter-spacing: -1.5px;
-  margin: 0 0 32px;
+  margin: 0 0 20px;
+}
+
+.mkt-subheading {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.6);
+  max-width: 560px;
+  margin: 0 0 36px;
+  text-align: center;
 }
 
 .mkt-avatar {

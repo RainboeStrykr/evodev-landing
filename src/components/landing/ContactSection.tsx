@@ -108,10 +108,10 @@ export function ContactSection() {
               viewport={{ once: true, margin: "-100px" }}
             >
               <h2 className="font-display italic text-2xl sm:text-3xl md:text-5xl text-text-primary mb-4">
-                Ready to transform your digital presence?
+                Ready to Transform Your Digital Presence?
               </h2>
               <p className="text-muted max-w-2xl text-sm md:text-base leading-relaxed mb-8 md:mb-10">
-                Contact us today and let's build something extraordinary together. We respond within 1 business day.
+                Stop settling for cookie-cutter templates. Partner with a web development and brand agency that turns your vision into a high-performing digital reality. We respond within 1 business day.
               </p>
 
 
@@ -150,13 +150,13 @@ export function ContactSection() {
                   <Calendar className="w-5 h-5 text-[#c9a84c]" />
                 </div>
                 <h3 className="font-display italic text-xl md:text-2xl text-text-primary mb-3">
-                  Schedule a discovery call
+                  Book a Free Consultation
                 </h3>
                 <p className="text-muted text-sm md:text-base leading-relaxed mb-8 flex-grow">
-                  Book a 30-minute technical briefing with our lead strategist. We'll discuss your idea, architecture, and timelines.
+                  Schedule a 30-minute technical briefing with our lead strategist. We'll map your custom web development needs, architecture, and timeline — no obligation.
                 </p>
                 <ShinyButton href="#" className="w-full md:w-auto self-start">
-                  Select time slot
+                  Get a Free Consultation
                 </ShinyButton>
 
               </motion.div>

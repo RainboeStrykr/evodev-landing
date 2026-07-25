@@ -52,9 +52,9 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 
 const SITE_URL = "https://evodev.site";
 const SITE_NAME = "EvoDev";
-const SITE_TITLE = "EvoDev — Your Technical Co-Founder, On Demand";
+const SITE_TITLE = "Custom Web Development & Brand Agency | EvoDev";
 const SITE_DESCRIPTION =
-  "EvoDev builds web apps, SaaS platforms, cloud infrastructure, and marketing systems for startups and founders.";
+  "EvoDev is a custom web development and brand agency for startups and founders. We build high-performance web apps, SaaS platforms, and digital identities that convert.";
 const OG_IMAGE = `${SITE_URL}/og-image.png`;
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
@@ -76,7 +76,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:image", content: OG_IMAGE },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
-      { property: "og:image:alt", content: "EvoDev — Your Technical Co-Founder, On Demand" },
+      { property: "og:image:alt", content: "EvoDev — Custom Web Development & Brand Agency" },
       // Twitter / X
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@evodev" },
@@ -155,8 +155,8 @@ const servicesJsonLd = {
       position: 1,
       item: {
         "@type": "Service",
-        name: "Custom Application Development",
-        description: "End-to-end web and mobile apps tailored to your product vision.",
+        name: "Custom Web & App Development",
+        description: "End-to-end responsive web development and mobile apps tailored to your product vision.",
         provider: { "@type": "Organization", name: SITE_NAME },
       },
     },
@@ -166,7 +166,7 @@ const servicesJsonLd = {
       item: {
         "@type": "Service",
         name: "SaaS Platform Engineering",
-        description: "Scalable multi-tenant platforms with modern architecture.",
+        description: "Scalable multi-tenant SaaS platforms with modern architecture.",
         provider: { "@type": "Organization", name: SITE_NAME },
       },
     },
@@ -175,8 +175,8 @@ const servicesJsonLd = {
       position: 3,
       item: {
         "@type": "Service",
-        name: "Cloud Architecture and DevOps",
-        description: "Infrastructure design, CI/CD pipelines, and managed deployments.",
+        name: "Brand Identity & UI/UX Design",
+        description: "Cohesive visual identity, logo design, and user-centric UI/UX design built for conversion.",
         provider: { "@type": "Organization", name: SITE_NAME },
       },
     },
@@ -185,8 +185,8 @@ const servicesJsonLd = {
       position: 4,
       item: {
         "@type": "Service",
-        name: "SEO and Social Media Optimization",
-        description: "Organic growth, content strategy, and paid acquisition.",
+        name: "SEO & Digital Growth Strategy",
+        description: "SEO-friendly website development, organic content strategy, and paid acquisition.",
         provider: { "@type": "Organization", name: SITE_NAME },
       },
     },

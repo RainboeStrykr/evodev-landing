@@ -23,33 +23,35 @@ function Index() {
     <>
       {/* SEO-only content: always rendered in DOM for crawlers, hidden visually */}
       <div aria-hidden="true" style={{ position: "absolute", width: 1, height: 1, overflow: "hidden", clip: "rect(0,0,0,0)", whiteSpace: "nowrap" }}>
-        <h1>Your Technical Co-Founder, on demand.</h1>
-        <h2>About EvoDev</h2>
-        <p>EvoDev, a brand by EvoDoc, is a digital agency helping businesses thrive online. We combine creativity, technology, and strategy to deliver measurable growth.</p>
-        <h2>Our Services</h2>
+        <h1>We Build Brands That Stand Out and Websites That Convert.</h1>
+        <p>Your all-in-one web development and brand agency — merging custom web design with digital strategy to accelerate your growth.</p>
+        <h2>Where Brand Strategy Meets Web Development</h2>
+        <p>EvoDev is a full-service digital branding and web design agency for startups and established brands. We merge brand strategy, custom web development, and SEO-driven strategy to build scalable digital ecosystems that deliver measurable growth.</p>
+        <h2>Core Services</h2>
         <ul>
-          <li><h3>Custom Application Development</h3><p>End-to-end web and mobile apps tailored to your product vision.</p></li>
-          <li><h3>SaaS Platform Engineering</h3><p>Scalable multi-tenant platforms with modern architecture.</p></li>
-          <li><h3>Cloud Architecture and DevOps</h3><p>Infrastructure design, CI/CD pipelines, and managed deployments.</p></li>
-          <li><h3>SEO and Social Media Optimization</h3><p>Organic growth, content strategy, and paid acquisition.</p></li>
+          <li><h3>Custom Web &amp; App Development</h3><p>End-to-end responsive web development and mobile apps tailored to your product vision. Fast, secure, and scalable custom websites built for conversion.</p></li>
+          <li><h3>SaaS Platform Engineering</h3><p>Scalable multi-tenant SaaS platforms with modern architecture and seamless CMS integration.</p></li>
+          <li><h3>Brand Identity &amp; UI/UX Design</h3><p>Cohesive visual identity, logo design, and user-centric UI/UX design rooted in conversion rate optimization.</p></li>
+          <li><h3>SEO &amp; Digital Growth Strategy</h3><p>SEO-friendly website development, organic content strategy, social media optimization, and paid acquisition.</p></li>
         </ul>
-        <h2>Our Process</h2>
+        <h2>Our Proven Process</h2>
         <ol>
-          <li><h3>Book a Call</h3><p>Schedule your free 30-min SaaS blueprint strategy session with our lead engineer.</p></li>
-          <li><h3>Strategy Session</h3><p>We map your tech stack, architecture, feature roadmap, and cost estimation in 48 hours.</p></li>
-          <li><h3>We Build</h3><p>Our full-stack team executes with precision — weekly demos, transparent progress, zero surprises.</p></li>
-          <li><h3>You Scale</h3><p>Launch, grow, and dominate your market. We stay as your technical partner for ongoing evolution.</p></li>
+          <li><h3>Discover &amp; Strategize</h3><p>We analyze your industry, competitors, and target audience to build a robust brand and web strategy.</p></li>
+          <li><h3>Design &amp; Prototype</h3><p>Our designers craft stunning UI/UX mockups and brand identity assets, mapping your tech stack and feature roadmap in 48 hours.</p></li>
+          <li><h3>Develop &amp; Build</h3><p>Our full-stack web development team brings designs to life with modern technologies — weekly demos and transparent progress.</p></li>
+          <li><h3>Launch &amp; Grow</h3><p>We deploy your SEO-friendly website and provide ongoing digital growth strategies and continuous optimization.</p></li>
         </ol>
         <h2>Featured Projects</h2>
         <ul>
-          <li><h3>Gyan Niketan Girls School</h3><p>Full-stack educational institution platform with admin portal and student management.</p></li>
-          <li><h3>Gyan Niketan Digital Architecture</h3><p>Premium school management portal with analytics dashboard and multi-role access.</p></li>
-          <li><h3>Human Perspective</h3><p>Brand system and storytelling platform for a documentary studio.</p></li>
-          <li><h3>Brand Identity</h3><p>End-to-end identity, product UI, and marketing site for a consumer SaaS.</p></li>
+          <li><h3>Gyan Niketan Girls School</h3><p>Full-stack educational platform with admin portal and student management — custom web development for an established institution.</p></li>
+          <li><h3>Gyan Niketan Digital Architecture</h3><p>Premium school management portal with analytics dashboard and multi-role access control.</p></li>
+          <li><h3>Human Perspective</h3><p>Brand identity and storytelling platform for a documentary studio — brand strategy meets responsive web design.</p></li>
+          <li><h3>Brand Identity Project</h3><p>End-to-end branding, product UI, and marketing site for a consumer SaaS — shipped from blank page to launch in six weeks.</p></li>
         </ul>
         <h2>Client Testimonials</h2>
-        <h2>Contact EvoDev</h2>
-        <p>Get in touch with EvoDev. Email: contact@evodoc.site. Phone: +91 96967 67289. We work globally and remotely.</p>
+        <p>Industry leaders and founders trust EvoDev to architect their digital ecosystems. Hear from our clients about the results our web development and brand agency delivers.</p>
+        <h2>Ready to Transform Your Digital Presence?</h2>
+        <p>Stop settling for cookie-cutter templates. Partner with a web development and brand agency that turns your vision into a high-performing digital reality. Contact EvoDev — email: contact@evodoc.site, phone: +91 96967 67289. We work globally and remotely.</p>
       </div>
       <LoadingScreen onComplete={() => setIsLoading(false)} />
       {!isLoading && (

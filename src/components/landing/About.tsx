@@ -53,27 +53,29 @@ export function About() {
             Who We Are
           </div>
 
-          <h2 className="sr-only">About EvoDev</h2>
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl italic text-text-primary leading-[1.05]">
+            Where Brand Strategy Meets Web Development
+          </h2>
 
-          <HoverPreview className="text-2xl leading-relaxed text-text-primary md:text-3xl md:leading-[1.4]">
+          <HoverPreview className="text-xl leading-relaxed text-muted md:text-2xl md:leading-[1.5]">
             <p className="font-body">
-              EvoDev, a brand by EvoDoc, is a dynamic{" "}
+              EvoDev is a full-service{" "}
               <HoverPreviewTrigger image="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80">
-                digital agency
+                digital branding and web design agency
               </HoverPreviewTrigger>{" "}
-              helping businesses thrive online. Our team combines{" "}
+              for startups and established brands. A powerful brand without a high-performing website is invisible — we fix that. Our team merges{" "}
               <HoverPreviewTrigger image="https://images.unsplash.com/photo-1611926653458-09294b3142bf?w=600&q=80">
-                creativity
+                brand strategy
               </HoverPreviewTrigger>
               ,{" "}
               <HoverPreviewTrigger image="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600&q=80">
-                technology
+                custom web development
               </HoverPreviewTrigger>{" "}
               and{" "}
               <HoverPreviewTrigger image="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&q=80">
-                strategy
+                SEO-driven strategy
               </HoverPreviewTrigger>{" "}
-              to deliver solutions as unique as your brand — empowering you to connect with your audience and achieve{" "}
+              to build scalable digital ecosystems — empowering you to connect with your audience and achieve{" "}
               <HoverPreviewTrigger image="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&q=80">
                 measurable growth
               </HoverPreviewTrigger>
@@ -83,12 +85,12 @@ export function About() {
 
           <div className="flex flex-wrap gap-8 pt-4">
             <div>
-              <div className="font-display italic text-4xl md:text-5xl text-accent">Expertise</div>
-              <div className="mt-1 text-sm text-muted">In digital transformation</div>
+              <div className="font-display italic text-4xl md:text-5xl text-accent">SEO-First</div>
+              <div className="mt-1 text-sm text-muted">Built to rank from day one</div>
             </div>
             <div>
-              <div className="font-display italic text-4xl md:text-5xl text-accent">Innovation</div>
-              <div className="mt-1 text-sm text-muted">Latest technologies</div>
+              <div className="font-display italic text-4xl md:text-5xl text-accent">ROI-Focused</div>
+              <div className="mt-1 text-sm text-muted">Design that drives revenue</div>
             </div>
             <div>
               <div className="font-display italic text-4xl md:text-5xl text-accent">Results</div>

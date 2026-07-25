@@ -8,11 +8,10 @@ const processData = [
     content: (
       <div className="space-y-2">
         <h3 className="font-display text-2xl italic text-text-primary md:text-3xl">
-          Book a Call
+          Discover & Strategize
         </h3>
         <p className="text-base leading-relaxed text-muted">
-          Schedule your free 30-min SaaS blueprint strategy session with our
-          lead engineer.
+          We analyze your industry, competitors, and target audience to build a robust brand and web strategy. Book your free 30-min blueprint session to get started.
         </p>
       </div>
     ),
@@ -22,11 +21,10 @@ const processData = [
     content: (
       <div className="space-y-2">
         <h3 className="font-display text-2xl italic text-text-primary md:text-3xl">
-          Strategy Session
+          Design & Prototype
         </h3>
         <p className="text-base leading-relaxed text-muted">
-          We map your tech stack, architecture, feature roadmap, and cost
-          estimation in 48 hours.
+          Our designers craft stunning UI/UX mockups and brand identity assets for your approval — mapping your tech stack, architecture, and feature roadmap in 48 hours.
         </p>
       </div>
     ),
@@ -36,11 +34,10 @@ const processData = [
     content: (
       <div className="space-y-2">
         <h3 className="font-display text-2xl italic text-text-primary md:text-3xl">
-          We Build
+          Develop & Build
         </h3>
         <p className="text-base leading-relaxed text-muted">
-          Our full-stack team executes with precision — weekly demos,
-          transparent progress, zero surprises.
+          Our full-stack web development team brings designs to life using modern technologies — weekly demos, transparent progress, zero surprises.
         </p>
       </div>
     ),
@@ -50,11 +47,10 @@ const processData = [
     content: (
       <div className="space-y-2">
         <h3 className="font-display text-2xl italic text-text-primary md:text-3xl">
-          You Scale
+          Launch & Grow
         </h3>
         <p className="text-base leading-relaxed text-muted">
-          Launch, grow, and dominate your market. We stay as your technical
-          partner for ongoing evolution.
+          We deploy your SEO-friendly website and stay as your technical partner — providing ongoing support, digital growth strategies, and continuous optimization.
         </p>
       </div>
     ),
