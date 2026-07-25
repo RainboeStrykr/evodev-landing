@@ -11,7 +11,7 @@ const processData = [
           Discover & Strategize
         </h3>
         <p className="text-base leading-relaxed text-muted">
-          We analyze your industry, competitors, and target audience to build a robust brand and web strategy. Book your free 30-min blueprint session to get started.
+          We analyze your industry, competitors, and target audience to build a robust brand and digital strategy. Book your free 30-min blueprint session to get started.
         </p>
       </div>
     ),
@@ -37,7 +37,7 @@ const processData = [
           Develop & Build
         </h3>
         <p className="text-base leading-relaxed text-muted">
-          Our full-stack web development team brings designs to life using modern technologies — weekly demos, transparent progress, zero surprises.
+          Our full-stack engineering team brings designs to life using modern technologies — weekly demos, transparent progress, zero surprises.
         </p>
       </div>
     ),
@@ -50,7 +50,7 @@ const processData = [
           Launch & Grow
         </h3>
         <p className="text-base leading-relaxed text-muted">
-          We deploy your SEO-friendly website and stay as your technical partner — providing ongoing support, digital growth strategies, and continuous optimization.
+          We deploy your SEO-optimized site and stay as your technical partner — providing ongoing support, digital growth strategies, and continuous optimization.
         </p>
       </div>
     ),

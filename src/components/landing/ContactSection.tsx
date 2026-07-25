@@ -111,7 +111,7 @@ export function ContactSection() {
                 Ready to Transform Your Digital Presence?
               </h2>
               <p className="text-muted max-w-2xl text-sm md:text-base leading-relaxed mb-8 md:mb-10">
-                Stop settling for cookie-cutter templates. Partner with a web development and brand agency that turns your vision into a high-performing digital reality. We respond within 1 business day.
+                Stop settling for cookie-cutter templates. Partner with a development and brand agency that turns your vision into a high-performing digital reality. We respond within 1 business day.
               </p>
 
 
@@ -153,7 +153,7 @@ export function ContactSection() {
                   Book a Free Consultation
                 </h3>
                 <p className="text-muted text-sm md:text-base leading-relaxed mb-8 flex-grow">
-                  Schedule a 30-minute technical briefing with our lead strategist. We'll map your custom web development needs, architecture, and timeline — no obligation.
+                  Schedule a 30-minute technical briefing with our lead strategist. We'll map your project needs, architecture, and timeline — no obligation.
                 </p>
                 <ShinyButton href="#" className="w-full md:w-auto self-start">
                   Get a Free Consultation

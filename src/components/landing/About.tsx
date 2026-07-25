@@ -54,22 +54,22 @@ export function About() {
           </div>
 
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl italic text-text-primary leading-[1.05]">
-            Where Brand Strategy Meets Web Development
+            Where Brand Strategy Meets Digital Engineering
           </h2>
 
           <HoverPreview className="text-xl leading-relaxed text-muted md:text-2xl md:leading-[1.5]">
             <p className="font-body">
               EvoDev is a full-service{" "}
               <HoverPreviewTrigger image="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80">
-                digital branding and web design agency
+                digital branding and design agency
               </HoverPreviewTrigger>{" "}
-              for startups and established brands. A powerful brand without a high-performing website is invisible — we fix that. Our team merges{" "}
+              for startups and established brands. A powerful brand without a high-performing site is invisible — we fix that. Our team merges{" "}
               <HoverPreviewTrigger image="https://images.unsplash.com/photo-1611926653458-09294b3142bf?w=600&q=80">
                 brand strategy
               </HoverPreviewTrigger>
               ,{" "}
               <HoverPreviewTrigger image="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600&q=80">
-                custom web development
+                custom engineering
               </HoverPreviewTrigger>{" "}
               and{" "}
               <HoverPreviewTrigger image="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&q=80">

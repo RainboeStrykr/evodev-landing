@@ -54,7 +54,7 @@ const SITE_URL = "https://evodev.site";
 const SITE_NAME = "EvoDev";
 const SITE_TITLE = "Custom Web Development & Brand Agency | EvoDev";
 const SITE_DESCRIPTION =
-  "EvoDev is a custom web development and brand agency for startups and founders. We build high-performance web apps, SaaS platforms, and digital identities that convert.";
+  "EvoDev is a custom development and branding agency for startups and founders — building high-performance apps, SaaS platforms, and digital identities that convert.";
 const OG_IMAGE = `${SITE_URL}/og-image.png`;
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({

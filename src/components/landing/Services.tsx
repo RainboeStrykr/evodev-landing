@@ -40,7 +40,7 @@ export function Services() {
           eyebrow="Core Services"
           title="End-to-end *digital* solutions"
           italic="digital"
-          subtext="From custom web development and brand identity to SEO and SaaS engineering — everything you need to dominate your market."
+          subtext="From custom application development and brand identity to SEO and SaaS engineering — everything you need to dominate your market."
           cta={<GhostButton>All services</GhostButton>}
         />
         <RevealImages items={services} />

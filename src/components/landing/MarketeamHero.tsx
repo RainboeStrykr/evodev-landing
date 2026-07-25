@@ -4,7 +4,7 @@ import { OrbitingCircles } from "@/components/ui/orbiting-circles";
 import { ShinyButton } from "@/components/ui/shiny-button";
 
 const HEADING = "We Build Brands That Stand Out and Websites That Convert.";
-const SUBHEADING = "Your all-in-one web development and brand agency — merging custom web design with digital strategy to accelerate your growth.";
+const SUBHEADING = "Your all-in-one development and brand agency — merging custom design with digital strategy to accelerate your growth.";
 const CTA_FADE_DELAY = 0.4;
 
 export function MarketeamHero() {
@@ -379,5 +379,7 @@ const css = `
   .mkt-h1 { font-size: 28px; }
   .mkt-orbits { transform: scale(.5); }
   .mkt-btn-start { padding: 12px 22px; font-size: 14px; }
+  .mkt-app { min-height: unset; }
+  .mkt-stage { min-height: unset; padding: 80px 24px 60px; }
 }
 `;
