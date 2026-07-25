@@ -11,7 +11,7 @@ const items = [
   { img: "/demo/aafra-restaurant.png", r: 2, href: "https://afraa-restaurant-patna-uevl.vercel.app/", label: "Aafra Cocktail Bar and Kitchen" },
   { img: "/demo/art-n-dreams.png", r: -2, href: "https://arts-n-dream.vercel.app/", label: "Luxury Art Gallery" },
   { img: "/demo/ispeak-mental-health.png", r: 3, href: "https://ispeak-mentalhealthfirm.vercel.app/", label: "Mental Health Clinic" },
-  { img: "/demo/metro-food-court.png", r: -1, href: "https://www.metrofoodcourt.com", label: "Food court and restaurant" },
+  { img: "/demo/mahavir-hospital.png", r: -1, href: "https://mahavir-hospital.vercel.app/", label: "Mahavir Hospital" },
   { img: "/demo/evocare.png", r: 2, href: "https://evodoc.in/evocare", label: "Healthcare AI" },
 ];
 

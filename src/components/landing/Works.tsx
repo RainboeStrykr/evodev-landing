@@ -17,11 +17,11 @@ const projects = [
       "Premium school management portal with an analytics dashboard and multi-role access.",
   },
   {
-    text: "Human Perspective",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=1600&q=80",
-    url: "#human-perspective",
+    text: "Metro Food Court",
+    image: "/demo/metro-food-court.png",
+    url: "https://www.metrofoodcourt.com",
     description:
-      "Brand system and storytelling platform for a documentary studio, built to scale from a single film to an entire library.",
+      "Metro Food Court is a quick-bites restaurant at New Bypass, Patna, serving North Indian, Chinese, and a full range of rolls and sandwiches.",
   },
   {
     text: "Evodoc",
