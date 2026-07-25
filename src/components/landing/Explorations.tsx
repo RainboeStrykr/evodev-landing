@@ -99,9 +99,9 @@ export function Explorations() {
                   href={it.href}
                   aria-label={it.label}
                   style={{ transform: `rotate(${it.r}deg)` }}
-                  className="pointer-events-auto self-start w-full max-w-[320px] aspect-square rounded-2xl overflow-hidden border border-stroke bg-surface hover:scale-[1.02] transition-transform block"
+                  className="pointer-events-auto self-start w-full max-w-[320px] rounded-2xl overflow-hidden border border-stroke bg-surface hover:scale-[1.02] transition-transform block"
                 >
-                  <img src={it.img} alt={it.label} className="w-full h-full object-cover" />
+                  <img src={it.img} alt={it.label} className="w-full h-auto block" />
                 </a>
               ))}
             </div>
@@ -112,9 +112,9 @@ export function Explorations() {
                   href={it.href}
                   aria-label={it.label}
                   style={{ transform: `rotate(${it.r}deg)` }}
-                  className="pointer-events-auto self-end w-full max-w-[320px] aspect-square rounded-2xl overflow-hidden border border-stroke bg-surface hover:scale-[1.02] transition-transform block"
+                  className="pointer-events-auto self-end w-full max-w-[320px] rounded-2xl overflow-hidden border border-stroke bg-surface hover:scale-[1.02] transition-transform block"
                 >
-                  <img src={it.img} alt={it.label} className="w-full h-full object-cover" />
+                  <img src={it.img} alt={it.label} className="w-full h-auto block" />
                 </a>
               ))}
             </div>
@@ -147,9 +147,9 @@ export function Explorations() {
               key={i}
               href={it.href}
               aria-label={it.label}
-              className="aspect-square rounded-xl overflow-hidden border border-stroke bg-surface block"
+              className="rounded-xl overflow-hidden border border-stroke bg-surface block"
             >
-              <img src={it.img} alt={it.label} className="w-full h-full object-cover" />
+              <img src={it.img} alt={it.label} className="w-full h-auto block" />
             </a>
           ))}
         </div>
