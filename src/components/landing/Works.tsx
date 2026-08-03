@@ -1,34 +1,42 @@
 import { SectionHeader, GhostButton } from "./SectionHeader";
-import { LoadingCarousel } from "@/components/ui/loading-carousel";
+import { FocusRail, type FocusRailItem } from "@/components/ui/focus-rail";
 
-const projects = [
+const projects: FocusRailItem[] = [
   {
-    text: "Gyan Niketan Girls School",
-    image: "/projects/gn-school-1.png",
-    url: "https://www.gyanniketan.in/",
+    id: 1,
+    title: "Gyan Niketan Girls School",
     description:
       "Full-stack educational institution platform with an admin portal and student management.",
+    imageSrc: "/projects/gn-school-1.png",
+    href: "https://www.gyanniketan.in/",
+    meta: "Education • Full-Stack",
   },
   {
-    text: "Gyan Niketan Digital Architecture",
-    image: "/projects/gn-school-2.png",
-    url: "https://www.gyanniketan.in/",
+    id: 2,
+    title: "Gyan Niketan Digital Architecture",
     description:
       "Premium school management portal with an analytics dashboard and multi-role access.",
+    imageSrc: "/projects/gn-school-2.png",
+    href: "https://www.gyanniketan.in/",
+    meta: "EdTech • SaaS",
   },
   {
-    text: "Metro Food Court",
-    image: "/projects/metro-food-court.png",
-    url: "https://www.metrofoodcourt.com",
+    id: 3,
+    title: "Metro Food Court",
     description:
       "Metro Food Court is a quick-bites restaurant at New Bypass, Patna, serving North Indian, Chinese, and a full range of rolls and sandwiches.",
+    imageSrc: "/projects/metro-food-court.png",
+    href: "https://www.metrofoodcourt.com",
+    meta: "Food & Beverage • Web",
   },
   {
-    text: "Evodoc",
-    image: "/projects/evodoc.png",
-    url: "https://evodoc.in",
+    id: 4,
+    title: "Evodoc",
     description:
       "The next generation of clinical intelligence. Empowering modern physicians with AI-assisted diagnostics and high-fidelity insights.",
+    imageSrc: "/projects/evodoc.png",
+    href: "https://evodoc.in",
+    meta: "HealthTech • AI",
   },
 ];
 
@@ -43,16 +51,8 @@ export function Works() {
           subtext="A selection of brands we've helped grow — from concept to launch."
           cta={<GhostButton>View all work</GhostButton>}
         />
-
-        <LoadingCarousel
-          tips={projects}
-          autoplayInterval={4000}
-          showNavigation
-          showProgress
-          showIndicators
-          aspectRatio="wide"
-        />
       </div>
+      <FocusRail items={projects} loop={true} autoPlay={false} />
     </section>
   );
 }

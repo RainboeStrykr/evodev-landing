@@ -6,7 +6,7 @@ import { MarketeamHero } from "@/components/landing/MarketeamHero";
 import { About } from "@/components/landing/About";
 import { Works } from "@/components/landing/Works";
 import { Services } from "@/components/landing/Services";
-import { OurProcess } from "@/components/landing/OurProcess";
+// import { OurProcess } from "@/components/landing/OurProcess";
 import { Explorations } from "@/components/landing/Explorations";
 import { Testimonials } from "@/components/landing/Testimonials";
 import { ContactSection } from "@/components/landing/ContactSection";
@@ -62,7 +62,7 @@ function Index() {
             <MarketeamHero />
             <About />
             <Services />
-            <OurProcess />
+            {/* <OurProcess /> */}
             <Works />
             <Explorations />
             <Testimonials />
